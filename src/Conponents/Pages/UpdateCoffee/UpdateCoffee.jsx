@@ -21,7 +21,7 @@ const UpdateCoffee = () => {
         const updatedCoffee = { name, quantity, supplier, test, category, details, imageUrl }
         // console.log(coffee);
 
-        fetch(`http://localhost:4000/coffee/${_id}`, {
+        fetch(`https://espresso-emporium-coffe-server-mojaer.vercel.app/coffee/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedCoffee)
