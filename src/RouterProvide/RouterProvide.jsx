@@ -12,18 +12,18 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <App></App>,
-        loader: () => fetch('http://localhost:4000/coffee'),
+        loader: () => fetch('https://espresso-emporium-coffe-server-mojaer.vercel.app/coffee'),
     },
     {
         path: "/coffee/:id",
         element: <SingleCoffee></SingleCoffee>,
-        loader: ({ params }) => fetch(`http://localhost:4000/coffee/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-coffe-server-mojaer.vercel.app/coffee/${params.id}`)
 
     },
     {
         path: "/updatecoffee/:id",
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({ params }) => fetch(`http://localhost:4000/coffee/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-coffe-server-mojaer.vercel.app/coffee/${params.id}`)
 
     },
     {
